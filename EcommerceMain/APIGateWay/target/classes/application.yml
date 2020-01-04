@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: apigateway-service
+    name: service-apigateway
   cloud:
     gateway:
       discovery:

@@ -1,0 +1,14 @@
+server:
+  port: 9002
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka/
+
+spring:
+  application:
+    name: service-oauth
+  redis:
+    host: 192.168.40.132
+    database: 1
