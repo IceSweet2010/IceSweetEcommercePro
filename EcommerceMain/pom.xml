@@ -63,5 +63,6 @@
     <module>UserCenterServer</module>
     <module>OAuthServer</module>
     <module>OAuth2Server</module>
+    <module>UserManageServer</module>
   </modules>
 </project>

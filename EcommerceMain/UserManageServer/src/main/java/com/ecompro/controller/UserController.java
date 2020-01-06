@@ -1,6 +1,7 @@
 package com.ecompro.controller;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -8,25 +9,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-import com.ecompro.entity.TestUsers;
-import com.ecompro.model.UserTestModel;
-import com.ecompro.service.TestUsersService;
+import com.ecompro.entityAndMapper.User;
+import com.ecompro.model.LoginModel;
+import com.ecompro.service.UserService;
 
-@RequestMapping("testusers")
+@RequestMapping("user")
 @RestController
-public class TestUsersController {
+public class UserController {
 	@Autowired
-	private TestUsersService userService;
+	private UserService userService;
 
 	@GetMapping("/list/all")
-	public List<TestUsers> listAll() {
+	public List<User> listAll() {
 		return userService.listAll();
 	}
 
-	@RequestMapping(value = "/getuserbyname", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
+	@RequestMapping(value = "/login", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
 	@ResponseBody
-	public String getuserbyname(@RequestBody UserTestModel user) {
-		String password = userService.loadUserByUsername(user.getUsername());
-		return "ok" + user.getUsername() + user.getPassword() + password;
+	public String login(@RequestBody LoginModel user) {
+		String userid = userService.login(user.getUsername(),user.getPassword());
+		return "ok" + userid;
 	}
 }

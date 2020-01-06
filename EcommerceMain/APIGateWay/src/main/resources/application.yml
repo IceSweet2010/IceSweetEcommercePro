@@ -14,7 +14,13 @@ spring:
       - id: service-usercenter
         uri: lb://SERVICE-USERCENTER
         predicates:
-          - Path=/user/**
+          - Path=/usercenter/**
+        filters:
+          - StripPrefix=1
+      - id: service-usermanage
+        uri: lb://SERVICE-USERMANAGE
+        predicates:
+          - Path=/usermanage/**
         filters:
           - StripPrefix=1
 
