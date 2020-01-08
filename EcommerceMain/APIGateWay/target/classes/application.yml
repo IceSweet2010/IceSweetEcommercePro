@@ -11,10 +11,10 @@ spring:
           enabled: false
           lowerCaseServiceId: true
       routes:
-      - id: service-usercenter
-        uri: lb://SERVICE-USERCENTER
+      - id: service-null
+        uri: lb://SERVICE-null
         predicates:
-          - Path=/usercenter/**
+          - Path=/nullerror/**
         filters:
           - StripPrefix=1
       - id: service-usermanage
