@@ -1,37 +1,25 @@
 package com.ecompro.entityAndMapper;
 
 public class User {
-	private String userID;
-	private String username;
+	private String userid;
+	private String tel;
 	private String password;
-	private String ortherInfo;
+	private String ortherinfo;
 
-	public User() {
-		super();
+	public String getUserId() {
+		return userid;
 	}
 
-	public User(String userID, String username, String password, String ortherInfo) {
-		super();
-		this.userID = userID;
-		this.username = username;
-		this.password = password;
-		this.ortherInfo = ortherInfo;
+	public void setUserId(String userid) {
+		this.userid = userid;
 	}
 
-	public String getUserID() {
-		return userID;
+	public String getTel() {
+		return tel;
 	}
 
-	public void setUserID(String userID) {
-		this.userID = userID;
-	}
-
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
+	public void setTel(String tel) {
+		this.tel = tel;
 	}
 
 	public String getPassword() {
@@ -43,10 +31,10 @@ public class User {
 	}
 
 	public String getOrtherInfo() {
-		return ortherInfo;
+		return ortherinfo;
 	}
 
-	public void setOrtherInfo(String ortherInfo) {
-		this.ortherInfo = ortherInfo;
+	public void setOrtherInfo(String ortherinfo) {
+		this.ortherinfo = ortherinfo;
 	}
 }

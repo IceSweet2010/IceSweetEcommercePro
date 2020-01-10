@@ -63,8 +63,8 @@ create table indexrecommend(
 	PRIMARY KEY(shopid,comid)
 );
 
---7. 店铺推荐商品表（由平台维护） indexrecommendofcatagory
-create table indexrecommendofcatagory(
+--7. 店铺推荐商品表（由平台维护） indexrecommendofcetagory
+create table indexrecommendofcetagory(
 	shopid varchar(20) not null, 
 	categoryid varchar(20) not null,
 	comid varchar(20) not null,
@@ -86,13 +86,16 @@ create table comdetials(
 
 --9. 商品评价表 evaluation
 create table evaluation(
+	orderid Varchar(40) not null,
 	shopid varchar(20) not null, 
 	categoryid varchar(20) not null,
 	comid varchar(20) not null,
 	goodlevel int(1) default 5, 
 	evaluations varchar(500) default '', 
-	PRIMARY KEY(shopid,comid)
+	PRIMARY KEY(orderid)
 );
+
+alter table evaluation add index  index_evaluation(shopid,comid);
 
 --10. 购物车表 shopcart
 create table shopcart(

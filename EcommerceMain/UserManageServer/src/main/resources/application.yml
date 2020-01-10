@@ -1,5 +1,5 @@
 server:
-  port: 9101
+  port: 9100
   
 eureka:
   client:
@@ -8,7 +8,7 @@ eureka:
      
 spring:
   application:
-    name: service-usermanage
+    name: service-user
   datasource:
     driver-class-name: com.mysql.jdbc.Driver   
     url: jdbc:mysql://192.168.40.132:3306/myecom

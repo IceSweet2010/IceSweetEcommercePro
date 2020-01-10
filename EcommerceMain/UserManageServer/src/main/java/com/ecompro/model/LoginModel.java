@@ -1,25 +1,15 @@
 package com.ecompro.model;
 
 public class LoginModel {
-	private String username;
+	private String tel;
 	private String password;
 
-	public LoginModel() {
-		super();
+	public String getTel() {
+		return tel;
 	}
 
-	public LoginModel(String username, String password) {
-		super();
-		this.username = username;
-		this.password = password;
-	}
-
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
+	public void setTel(String tel) {
+		this.tel = tel;
 	}
 
 	public String getPassword() {

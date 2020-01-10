@@ -1,0 +1,16 @@
+server:
+  port: 9101
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka/
+     
+spring:
+  application:
+    name: service-com
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver   
+    url: jdbc:mysql://192.168.40.132:3306/myecom
+    username: devsdus
+    password: 123456

@@ -9,6 +9,6 @@ public interface UserMapper {
 	@Select("select * from user")
 	List<User> selectAll();
 
-	@Select("SELECT * FROM user WHERE username = #{arg0} and password =#{arg1} ")
-	User findByNameAndPwd(String username, String password);
+	@Select("SELECT * FROM user WHERE tel = #{arg0} and password =#{arg1} ")
+	User findByTelAndPwd(String tel, String password);
 }

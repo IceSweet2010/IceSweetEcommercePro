@@ -15,8 +15,8 @@ public class UserService {
 		return userMapper.selectAll();
 	}
 
-	public String login(String username,String password) {
-		User user = userMapper.findByNameAndPwd(username,password);
-		return user.getUserID();
+	public String login(String tel,String password) {
+		User user = userMapper.findByTelAndPwd(tel,password);
+		return user.getUserId();
 	}
 }

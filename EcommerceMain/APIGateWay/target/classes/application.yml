@@ -17,13 +17,25 @@ spring:
           - Path=/nullerror/**
         filters:
           - StripPrefix=1
-      - id: service-usermanage
-        uri: lb://SERVICE-USERMANAGE
+      - id: service-user
+        uri: lb://SERVICE-USER
         predicates:
-          - Path=/usermanage/**
+          - Path=/user/**
         filters:
           - StripPrefix=1
-
+      - id: service-com
+        uri: lb://SERVICE-COM
+        predicates:
+          - Path=/commodity/**
+        filters:
+          - StripPrefix=1
+      - id: service-order
+        uri: lb://SERVICE-ORDER
+        predicates:
+          - Path=/order/**
+        filters:
+          - StripPrefix=1
+          
 eureka:
   client:
     service-url:

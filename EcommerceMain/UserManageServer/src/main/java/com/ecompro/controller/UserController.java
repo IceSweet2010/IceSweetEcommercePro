@@ -27,7 +27,7 @@ public class UserController {
 	@RequestMapping(value = "/login", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
 	@ResponseBody
 	public String login(@RequestBody LoginModel user) {
-		String userid = userService.login(user.getUsername(),user.getPassword());
+		String userid = userService.login(user.getTel(), user.getPassword());
 		return "ok" + userid;
 	}
 }
