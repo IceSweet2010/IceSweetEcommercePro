@@ -63,5 +63,6 @@
 		<module>UserManageServer</module>
     <module>CommodityServer</module>
     <module>OrderManageServer</module>
+    <module>XiaoYu</module>
   </modules>
 </project>
